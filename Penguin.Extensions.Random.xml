@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Penguin.Extensions.Random</name>
+    </assembly>
+    <members>
+        <member name="M:Penguin.Extensions.Randomizer.RandomExtensions.Bool(System.Random)">
+            <summary>
+            Creates a random bool
+            </summary>
+            <param name="random">The source randomizer</param>
+            <returns>A random bool</returns>
+        </member>
+        <member name="M:Penguin.Extensions.Randomizer.RandomExtensions.DateTime(System.Random,System.Nullable{System.DateTime},System.Nullable{System.DateTime})">
+            <summary>
+            Creates a random DateTime
+            </summary>
+            <param name="random">The source randomizer</param>
+            <param name="MinDate">The minimum acceptable date</param>
+            <param name="MaxDate">The maximum acceptable date</param>
+            <returns>A random date</returns>
+        </member>
+        <member name="M:Penguin.Extensions.Randomizer.RandomExtensions.RandomBytes(System.Random,System.Int32)">
+            <summary>
+            Creates a random array of bytes of a given length
+            </summary>
+            <param name="random">The source randomizer</param>
+            <param name="length">The length of the array</param>
+            <returns>The random byte array</returns>
+        </member>
+        <member name="M:Penguin.Extensions.Randomizer.RandomExtensions.RandomBytes(System.Random,System.Int64)">
+            <summary>
+            Creates a random array of bytes of a given length
+            </summary>
+            <param name="random">The source randomizer</param>
+            <param name="length">The length of the array</param>
+            <returns>The random byte array</returns>
+        </member>
+        <member name="M:Penguin.Extensions.Randomizer.RandomExtensions.String(System.Random,System.Int32,System.String)">
+            <summary>
+            Creates a random string from the source character set
+            </summary>
+            <param name="random">The source randomizer</param>
+            <param name="length">The length of the random string</param>
+            <param name="chars">The source pool of characters</param>
+            <returns>The random string</returns>
+        </member>
+        <member name="M:Penguin.Extensions.Randomizer.RandomExtensions.NextDouble(System.Random,System.Double,System.Double)">
+            <summary>
+            Gets a double between two values
+            </summary>
+            <param name="r">Source randomizer</param>
+            <param name="Min">Min value</param>
+            <param name="Max">Max value</param>
+            <returns>A random double</returns>
+        </member>
+    </members>
+</doc>
