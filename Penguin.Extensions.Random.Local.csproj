@@ -1,0 +1,9 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <PackageProjectUrl>https://github.com/penguincms/Penguin.Extensions.Random</PackageProjectUrl>
+    <Version>1.1.7</Version>
+    <Description>Extension methods for producing random data. Currently contains methods for Bool, DateTime, String, and Byte[]. Good for random data population for testing</Description>
+  </PropertyGroup>
+  <Import Project="Penguin.Projects.Shared\Penguin.Projects.Shared.csproj" />
+</Project>
