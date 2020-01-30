@@ -6,6 +6,7 @@
     <Description>Extension methods for producing random data. Currently contains methods for Bool, DateTime, String, and Byte[]. Good for random data population for testing</Description>
     <AssemblyName>Penguin.Extensions.Random</AssemblyName>
     <RootNamespace>Penguin.Extensions.Random</RootNamespace>
+    <DocumentationFile>Penguin.Extensions.Random.xml</DocumentationFile>
   </PropertyGroup>
   <Import Project="Penguin.Projects.Shared\Penguin.Projects.Shared.csproj" />
 </Project>
