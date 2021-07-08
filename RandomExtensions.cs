@@ -4,6 +4,7 @@ using System.Linq;
 namespace Penguin.Extensions.Randomizer
 {
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
+
     public static class RandomExtensions
 #pragma warning restore CS1591 // Missing XML comment for publicly visible type or member
     {
@@ -14,7 +15,15 @@ namespace Penguin.Extensions.Randomizer
         /// </summary>
         /// <param name="random">The source randomizer</param>
         /// <returns>A random bool</returns>
-        public static bool Bool(this Random random) => random.Next(0, 1) == 1;
+        public static bool Bool(this Random random)
+        {
+            if (random is null)
+            {
+                throw new ArgumentNullException(nameof(random));
+            }
+
+            return random.Next(0, 1) == 1;
+        }
 
         /// <summary>
         /// Creates a random DateTime
@@ -25,6 +34,11 @@ namespace Penguin.Extensions.Randomizer
         /// <returns>A random date</returns>
         public static DateTime DateTime(this Random random, DateTime? MinDate = null, DateTime? MaxDate = null)
         {
+            if (random is null)
+            {
+                throw new ArgumentNullException(nameof(random));
+            }
+
             MinDate = MinDate ?? System.DateTime.MinValue;
             MaxDate = MaxDate ?? System.DateTime.Now;
 
@@ -40,6 +54,11 @@ namespace Penguin.Extensions.Randomizer
         /// <returns>The random byte array</returns>
         public static byte[] RandomBytes(this System.Random random, int length)
         {
+            if (random is null)
+            {
+                throw new ArgumentNullException(nameof(random));
+            }
+
             byte[] randomBytes = new byte[length];
             random.NextBytes(randomBytes);
             return randomBytes;
@@ -53,6 +72,11 @@ namespace Penguin.Extensions.Randomizer
         /// <returns>The random byte array</returns>
         public static byte[] RandomBytes(this System.Random random, long length)
         {
+            if (random is null)
+            {
+                throw new ArgumentNullException(nameof(random));
+            }
+
             byte[] randomBytes = new byte[length];
             random.NextBytes(randomBytes);
             return randomBytes;
@@ -78,10 +102,16 @@ namespace Penguin.Extensions.Randomizer
         /// <param name="Min">Min value</param>
         /// <param name="Max">Max value</param>
         /// <returns>A random double</returns>
-        public static Double NextDouble(this System.Random r, double Min, double Max)
+        public static double NextDouble(this System.Random r, double Min, double Max)
         {
+            if (r is null)
+            {
+                throw new ArgumentNullException(nameof(r));
+            }
+
             return r.NextDouble() * (Max - Min) + Min;
         }
+
         #endregion Methods
     }
 }
