@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Linq;
 
-namespace Penguin.Extensions.Randomizer
+namespace Penguin.Extensions.Random
 {
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
@@ -15,14 +15,9 @@ namespace Penguin.Extensions.Randomizer
         /// </summary>
         /// <param name="random">The source randomizer</param>
         /// <returns>A random bool</returns>
-        public static bool Bool(this Random random)
+        public static bool Bool(this System.Random random)
         {
-            if (random is null)
-            {
-                throw new ArgumentNullException(nameof(random));
-            }
-
-            return random.Next(0, 1) == 1;
+            return random is null ? throw new ArgumentNullException(nameof(random)) : random.Next(0, 1) == 1;
         }
 
         /// <summary>
@@ -32,15 +27,15 @@ namespace Penguin.Extensions.Randomizer
         /// <param name="MinDate">The minimum acceptable date</param>
         /// <param name="MaxDate">The maximum acceptable date</param>
         /// <returns>A random date</returns>
-        public static DateTime DateTime(this Random random, DateTime? MinDate = null, DateTime? MaxDate = null)
+        public static DateTime DateTime(this System.Random random, DateTime? MinDate = null, DateTime? MaxDate = null)
         {
             if (random is null)
             {
                 throw new ArgumentNullException(nameof(random));
             }
 
-            MinDate = MinDate ?? System.DateTime.MinValue;
-            MaxDate = MaxDate ?? System.DateTime.Now;
+            MinDate ??= System.DateTime.MinValue;
+            MaxDate ??= System.DateTime.Now;
 
             int range = (MaxDate - MinDate).Value.Days;
             return MinDate.Value.AddDays(random.Next(range));
@@ -104,12 +99,7 @@ namespace Penguin.Extensions.Randomizer
         /// <returns>A random double</returns>
         public static double NextDouble(this System.Random r, double Min, double Max)
         {
-            if (r is null)
-            {
-                throw new ArgumentNullException(nameof(r));
-            }
-
-            return r.NextDouble() * (Max - Min) + Min;
+            return r is null ? throw new ArgumentNullException(nameof(r)) : r.NextDouble() * (Max - Min) + Min;
         }
 
         #endregion Methods

@@ -4,14 +4,14 @@
         <name>Penguin.Extensions.Random</name>
     </assembly>
     <members>
-        <member name="M:Penguin.Extensions.Randomizer.RandomExtensions.Bool(System.Random)">
+        <member name="M:Penguin.Extensions.Random.RandomExtensions.Bool(System.Random)">
             <summary>
             Creates a random bool
             </summary>
             <param name="random">The source randomizer</param>
             <returns>A random bool</returns>
         </member>
-        <member name="M:Penguin.Extensions.Randomizer.RandomExtensions.DateTime(System.Random,System.Nullable{System.DateTime},System.Nullable{System.DateTime})">
+        <member name="M:Penguin.Extensions.Random.RandomExtensions.DateTime(System.Random,System.Nullable{System.DateTime},System.Nullable{System.DateTime})">
             <summary>
             Creates a random DateTime
             </summary>
@@ -20,7 +20,7 @@
             <param name="MaxDate">The maximum acceptable date</param>
             <returns>A random date</returns>
         </member>
-        <member name="M:Penguin.Extensions.Randomizer.RandomExtensions.RandomBytes(System.Random,System.Int32)">
+        <member name="M:Penguin.Extensions.Random.RandomExtensions.RandomBytes(System.Random,System.Int32)">
             <summary>
             Creates a random array of bytes of a given length
             </summary>
@@ -28,7 +28,7 @@
             <param name="length">The length of the array</param>
             <returns>The random byte array</returns>
         </member>
-        <member name="M:Penguin.Extensions.Randomizer.RandomExtensions.RandomBytes(System.Random,System.Int64)">
+        <member name="M:Penguin.Extensions.Random.RandomExtensions.RandomBytes(System.Random,System.Int64)">
             <summary>
             Creates a random array of bytes of a given length
             </summary>
@@ -36,7 +36,7 @@
             <param name="length">The length of the array</param>
             <returns>The random byte array</returns>
         </member>
-        <member name="M:Penguin.Extensions.Randomizer.RandomExtensions.String(System.Random,System.Int32,System.String)">
+        <member name="M:Penguin.Extensions.Random.RandomExtensions.String(System.Random,System.Int32,System.String)">
             <summary>
             Creates a random string from the source character set
             </summary>
@@ -45,7 +45,7 @@
             <param name="chars">The source pool of characters</param>
             <returns>The random string</returns>
         </member>
-        <member name="M:Penguin.Extensions.Randomizer.RandomExtensions.NextDouble(System.Random,System.Double,System.Double)">
+        <member name="M:Penguin.Extensions.Random.RandomExtensions.NextDouble(System.Random,System.Double,System.Double)">
             <summary>
             Gets a double between two values
             </summary>
